@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import React, { useEffect } from 'react'; 
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import AuthStack from './src/navigation/AuthStack';
 
 
 const {Navigator, Screen} = createNativeStackNavigator();
@@ -14,8 +15,7 @@ export default function App() {
       <StatusBar style="auto" />
       <Navigator>
         <Screen name='AuthStack' component={AuthStack} />
-        <Screen name='MainStack' component={AppStack} />
-      
+      {/* <Screen name='MainStack' component={AppStack} /> */}
       
       </Navigator>
       </NavigationContainer>

@@ -1,15 +1,21 @@
 import React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import SignupScreen from '../screens/auth/SignupScreen';
+import LoginScreen from '../screens/auth/LoginScreen';
 
-const AuthStack = (props) => {
-  return (
-    <View style={styles.container}>
-      <Text>AuthStack</Text>
-    </View>
-  );
-};
+const { Navigator, Screen } = createNativeStackNavigator();
 
-export default AuthStack;
+const AuthStack = () => {
+    return (
+      <Navigator>
+        <Screen name="Signup" component={SignupScreen} />
+        <Screen name="Login" component={LoginScreen} />
+      </Navigator>
+    );
+  };
+  
+  export default AuthStack;
 
 const styles = StyleSheet.create({
   container: {},

@@ -11,7 +11,7 @@ const AuthStack = () => {
     return (
       <Navigator>
         <Screen options={STANDARD_NAVIGATION_OPTIONS} name="Signup" component={SignupScreen} />
-        <Screen name="Login" component={LoginScreen} />
+        <Screen options={STANDARD_NAVIGATION_OPTIONS} name="Login" component={LoginScreen} />
       </Navigator>
     );
   };
